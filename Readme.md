@@ -1,4 +1,5 @@
-1. > it's data is saved on mongo db atlas .
+
+1.>  it's data is saved on mongo db atlas .
     database name - newsletter
     collection name -  registers
 
