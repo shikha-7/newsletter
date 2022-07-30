@@ -19,7 +19,7 @@ formDOM.addEventListener("submit", async (e) => {
         const { data } = await axios.post("/api/v1/user/register", { name, email });
         e.target.reset();
         formAlertDOM.style.display = 'block'
-        formAlertDOM.textContent = `successfully logged in`;
+        formAlertDOM.textContent = `Thank You for contacting us`;
     }
     catch (err) {
         formAlertDOM.style.display = 'block'
