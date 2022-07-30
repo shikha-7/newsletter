@@ -3,12 +3,12 @@ const { StatusCodes } = require("http-status-codes");
 
 
 const register = async (req, res) => {
-    const { name, email, password } = req.body;
+    const { name, email } = req.body;
     const users = await UserSchema.findOne({ email });
     if (users) {
         res.status(StatusCodes.BAD_REQUEST).json({ msg: `EmailId Already Exist` })
     }
-    const user = await UserSchema.create({ name, email, password });
+    const user = await UserSchema.create({ name, email });
     res.status(StatusCodes.CREATED).json({ user });
 }
 
